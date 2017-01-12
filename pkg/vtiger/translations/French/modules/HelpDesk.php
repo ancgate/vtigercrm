@@ -38,7 +38,7 @@ $languageStrings = array(
 	'LBL_STATUS'                   => 'Statut'                      , 
 	'LBL_SEVERITY'                 => 'Engagement'                  , 
 	'LBL_CONVERT_FAQ'              => 'Convert to FAQ'              , 
-	'LBL_RELATED_TO'               => 'Relatif à'                  ,
+	'LBL_RELATED_TO'               => 'Client'                  ,
 
 	//added to support i18n in ticket mails
 	'Hi' => 'Bonjour',
@@ -78,5 +78,5 @@ $languageStrings = array(
 	'LBL_ALTBODY' => 'Ceci est le corps du mail texte pour les clients mails non-HTML',
 	'HelpDesk ID' => 'Ticket ID',
 	'Ticket ID' => 'Ref ticket',
-	'LBL_TICKET_NUMBER' => 'Nombre de billets',
+	'LBL_TICKET_NUMBER' => 'Nombre de Tickets',
 );

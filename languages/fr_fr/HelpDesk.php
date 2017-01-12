@@ -41,7 +41,7 @@ $languageStrings = array(
 	'LBL_STATUS'                   => 'Statut'                      , 
 	'LBL_SEVERITY'                 => 'Severite'                  , 
 	'LBL_CONVERT_FAQ'              => 'Convertir en FAQ'              , 
-	'LBL_RELATED_TO'               => 'Cient'                  ,
+	'LBL_RELATED_TO'               => 'Client'                  ,
 
 	//added to support i18n in ticket mails
 	'Hi' => 'Bonjour',
