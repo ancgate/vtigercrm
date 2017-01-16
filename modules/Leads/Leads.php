@@ -715,14 +715,14 @@ class Leads extends CRMEntity {
         $query = "select case when (vtiger_users.user_name not like '') then $userNameSql else vtiger_groups.groupname end as user_name,
                 vtiger_crmentity.crmid, vtiger_troubletickets.title, vtiger_leaddetails.leadid, vtiger_troubletickets.parent_id,
                 vtiger_leaddetails.firstname, vtiger_leaddetails.lastname, vtiger_troubletickets.status, vtiger_troubletickets.priority,
-                vtiger_crmentity.smownerid, vtiger_troubletickets.ticket_no, vtiger_ticketcf.cf_751
+                vtiger_crmentity.smownerid, vtiger_troubletickets.ticket_no, vtiger_ticketcf.cf_751, vtiger_crmentity.createdtime
                 from vtiger_troubletickets 
                 inner join vtiger_crmentity on vtiger_crmentity.crmid=vtiger_troubletickets.ticketid
                 inner join vtiger_ticketcf on vtiger_troubletickets.ticketid = vtiger_ticketcf.ticketid
                 left join vtiger_leaddetails on vtiger_leaddetails.leadid=vtiger_troubletickets.parent_id
                 left join vtiger_users on vtiger_users.id=vtiger_crmentity.smownerid
                 left join vtiger_groups on vtiger_groups.groupid=vtiger_crmentity.smownerid
-                where vtiger_crmentity.deleted=0 and vtiger_ticketcf.cf_767=" . $id;
+                where vtiger_crmentity.deleted=0 and vtiger_ticketcf.cf_767=" . $id." ORDER by vtiger_crmentity.createdtime DESC";
 
         $return_value = GetRelatedList($this_module, $related_module, $other, $query, $button, $returnset);
 

@@ -768,9 +768,9 @@ class Accounts extends CRMEntity {
 				WHERE  vtiger_crmentity.deleted = 0 and (vtiger_troubletickets.parent_id = $id";
 
 		if(!empty ($entityIds)){
-			$query .= " OR vtiger_troubletickets.contact_id IN (".$entityIds."))";
+			$query .= " OR vtiger_troubletickets.contact_id IN (".$entityIds.")) ORDER by vtiger_crmentity.createdtime DESC";
 		} else {
-			$query .= ")";
+			$query .= ") ORDER by vtiger_crmentity.createdtime DESC";
 		}
 		$return_value = GetRelatedList($this_module, $related_module, $other, $query, $button, $returnset);
 
