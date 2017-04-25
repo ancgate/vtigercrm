@@ -372,8 +372,10 @@ class Users extends CRMEntity {
                 require_once('modules/Users/authTypes/adLDAP.php');
                 $adldap = new adLDAP();
                 if ($adldap->authenticate($this->column_fields["user_name"],$user_password)) {
+                    error_log("Utilisateur Correct et Mot de Passe Correct");
                     return true;
                 } else {
+                    error_log("Utilisateur inCorrect et Mot de Passe inCorrect");
                     return false;
                 }
                 break;
